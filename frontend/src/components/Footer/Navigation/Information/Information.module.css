@@ -1,0 +1,38 @@
+.info__wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.info {
+    display: flex;
+    width: 80%;
+}
+
+.info li {
+    padding: 20px;
+    display: flex;
+}
+
+.info li a {
+    color: whitesmoke; 
+    font-size: large;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.info li a:hover {
+    color: grey;
+}
+
+.contacts {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    color: rgb(125, 123, 122);
+}
+
+@media screen and (max-width: 900px){
+    .contacts {
+        display: none;
+    }
+}

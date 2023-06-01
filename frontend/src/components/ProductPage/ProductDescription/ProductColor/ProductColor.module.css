@@ -1,0 +1,18 @@
+.color {
+    padding-bottom: 5%;
+}
+
+.color__title {
+    padding-bottom: 2%;
+    font-weight: 500;
+    font-size: large;
+}
+
+.select__color {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-right: 5px;
+}

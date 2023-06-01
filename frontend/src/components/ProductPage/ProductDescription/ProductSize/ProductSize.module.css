@@ -1,0 +1,13 @@
+.size {
+    padding-bottom: 5%;
+}
+
+.size__title {
+    padding-bottom: 2%;
+    font-weight: 500;
+    font-size: large;
+}
+
+.size__dropdown {
+    max-width: 20%;
+}

@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    color: rgb(125, 123, 122);
+    text-decoration: none;
+}
+
+.container h3 a {
+    display: flex;
+    color: rgb(125, 123, 122);
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.container h3 a:hover {
+    color: rgb(65, 65, 65);
+}

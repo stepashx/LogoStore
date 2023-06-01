@@ -13,5 +13,5 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: calc(100% - 36px);
+    width: calc(100% - 100px);
 }

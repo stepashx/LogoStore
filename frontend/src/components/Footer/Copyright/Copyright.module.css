@@ -1,0 +1,6 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    color: rgb(125, 123, 122);
+}

@@ -1,0 +1,44 @@
+.container {
+    font-weight: 100;
+    display: flex;
+    padding: 25px 0;
+    padding-top: 0px;
+    border-bottom: 1px solid dimgray;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.navigation {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 22% 26% 27% 1fr;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.navigation li {
+    margin: 0;
+    margin-bottom: 16px;
+    padding-bottom: 20px;
+}
+
+.navigation li a {
+    color: whitesmoke; 
+    font-size: 14;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.nav__title a{
+    font-size: large;
+    font-weight: bold;
+}
+
+.navigation li a:hover {
+    color: grey;
+}

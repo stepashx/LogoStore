@@ -1,0 +1,17 @@
+.footer {
+    display: block;
+    background-color: rgb(50, 48, 47);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: whitesmoke;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: calc(100% - 36px);
+}

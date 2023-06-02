@@ -1,5 +1,6 @@
 import ProductColor from './ProductColor/ProductColor';
-import classes from './ProductDescription.module.css'
+import classes from './ProductDescription.module.css';
+import ProductOrder from './ProductOrder/ProductOrder';
 import ProductSize from './ProductSize/ProductSize';
 
 
@@ -11,12 +12,19 @@ function ProductDescription() {
     product.set("article", "3123214");
     product.set("description", "скоростные педали на каждый день. лучшие материалы за свою цену!");
     product.set("composition", "Хлопок 100%");
-
     var sizes = ["41", "44", "48"];
-    product.set("sizes", sizes);
-
+    product.set("size", sizes[0]);
     var colors = ["red", "black", "grey", "white"];
-    product.set("colors", colors);
+    product.set("color", colors[0]);
+    product.set("price", "666$");
+
+    const setSize = (size) => {
+        product.set("size", size)
+    };
+
+    const setColor = (color) => {
+        product.set("color", color)
+    };
 
     return (
         <div className={classes.container}>
@@ -39,9 +47,11 @@ function ProductDescription() {
                 {product.get("composition")}
             </div>
 
-            <ProductSize value={product.get("sizes")} />
+            <ProductSize value={sizes} onSize={setSize} />
 
-            <ProductColor value={product.get("colors")} />
+            <ProductColor value={colors} onColor={setColor} />
+
+            <ProductOrder value={product} />
 
             <div className={classes.order}>
 

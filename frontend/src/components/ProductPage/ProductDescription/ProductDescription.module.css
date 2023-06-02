@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.title {
+    padding-bottom: 5%;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.article {
+    padding-bottom: 5%;
+
+}
+
+.description {
+    padding-bottom: 5%;
+
+}
+
+.composition {
+    padding-bottom: 5%;
+}
+
+.composition__title {
+    padding-bottom: 2%;
+    font-weight: 500;
+    font-size: large;
+}

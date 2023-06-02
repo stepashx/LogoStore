@@ -1,0 +1,25 @@
+.container {
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    width: calc(100% - 100px);
+}
+
+.content {
+    margin-top: 50px;
+    display: flex;
+}
+
+.left__part {
+    width: 50%;
+    margin-right: 5%;
+}
+
+.right__part {
+    width: 50%;
+    margin-left: 5%;
+}

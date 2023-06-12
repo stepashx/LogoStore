@@ -13,15 +13,6 @@ class Category(Base):
     item = relationship("Item", back_populates="category")
 
 
-class Discount(Base):
-    __tablename__ = "discount"
-
-    id = Column(Integer, primary_key=True, index=True)
-    discount_percent = Column(Integer)
-
-    item = relationship("Item", back_populates="discount")
-
-
 class Item(Base):
     __tablename__ = "item"
 
@@ -29,11 +20,10 @@ class Item(Base):
     title = Column(String, index=True)
     description = Column(String)
     price = Column(Integer, index=True)
+    discount_percent = Column(Integer)
     category_id = Column(Integer, ForeignKey("category.id"))
-    discount_id = Column(Integer, ForeignKey("discount.id"))
 
     category = relationship("Category", back_populates="item")
-    discount = relationship("Discount", back_populates="item")
     cart_item = relationship("CartItem", back_populates="item")
     order_item = relationship("Order", back_populates="item")
 
@@ -63,7 +53,6 @@ class CartItem(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     quantity = Column(Integer)
-    create_at = Column(TIMESTAMP)
     item_id = Column(Integer, ForeignKey("item.id"))
     shopping_session_id = Column(Integer, ForeignKey("shopping_session.id"))
 
@@ -92,7 +81,6 @@ class OrderDetails(Base):
     user = relationship("User", back_populates="order_details")
     payment_details = relationship("PaymentDetails", back_populates="order_details")
     order_item = relationship("OrderItem", back_populates="order_details")
-
 
 
 class OrderItem(Base):

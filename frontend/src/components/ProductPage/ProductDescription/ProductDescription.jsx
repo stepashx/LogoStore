@@ -52,10 +52,6 @@ function ProductDescription() {
             <ProductColor value={colors} onColor={setColor} />
 
             <ProductOrder value={product} />
-
-            <div className={classes.order}>
-
-            </div>
         </div>
     );
 }

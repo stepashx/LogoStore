@@ -1,0 +1,38 @@
+.container {
+    margin-top: 20px;
+    border: 2px rgb(186, 186, 186) solid;
+    border-radius: 5px;
+}
+
+.content__wrapper {
+    margin: 5%;
+}
+
+.content__wrapper h1 {
+    font-size: 26px;
+    font-weight: 400;
+    color: rgb(78, 78, 78);
+    margin-bottom: 1%;
+}
+
+.about__us__btn {
+    background-color: rgb(50, 48, 47);
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    transition: background-color .3s;
+    margin-top: 2%;
+    border: none;
+    border-radius: 2px;
+}
+
+.about__us__btn h1 {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: white;
+    font-size: 20px;
+}
+
+.about__us__btn:hover {
+    background-color:rgb(119, 119, 119);
+}

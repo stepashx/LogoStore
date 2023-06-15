@@ -34,6 +34,7 @@ class Role(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     permissions = Column(JSON)
+
     user = relationship("User", back_populates="role")
 
 
@@ -46,7 +47,7 @@ class User(Base):
     registered_at = Column(TIMESTAMP, default=datetime.utcnow)
     role_id = Column(Integer, ForeignKey("role.id"))
     hashed_password = Column(String, nullable=False)
-    is_active = Column("is_active", Boolean, default=True, nullable=False),
+    is_active = Column("is_active", Boolean, default=True, nullable=False)
     is_superuser = Column("is_superuser", Boolean, default=False, nullable=False)
     is_verified = Column("is_verified", Boolean, default=False, nullable=False)
 

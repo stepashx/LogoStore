@@ -67,8 +67,15 @@ class OrderDetails(BaseModel):
 
 class User(BaseModel):
     id: int
-    shopping_sessions = list[ShoppingSession]
-    order_details = list[OrderDetails]
+    email: str
+    password: str
+    username: str
+    role_id: int
+    is_active: bool = True
+    is_superuser: bool = False
+    is_verified: bool = False
+    shopping_sessions: list[ShoppingSession]
+    order_details: list[OrderDetails]
 
     class Config:
         orm_mode = True

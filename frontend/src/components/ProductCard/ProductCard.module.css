@@ -1,0 +1,63 @@
+.productCard {
+    position: relative;
+    display: flex;
+    width: 17vw;
+    padding: 3vh 2vw;
+    margin: 2vh 2vw;
+    background: rgb(204, 201, 199);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.newFlagActive, .saleFlagActive {
+    position: absolute;
+    background: rgb(144, 142, 142);
+    top: 5vh;
+    left: 2vw;
+    padding: 1vh 2vw;
+    font-weight: 500;
+}
+
+.newFlag, .saleFlag {
+    display: none;
+}
+
+.toFavorites {
+    position: absolute;
+    top: 5vh;
+    right: 3vw;
+    width: 2vw;
+}
+
+.toPrev, .toNext {
+    position: absolute;
+    top: 25vh;
+    right: 3vw;
+    width: 2vw;
+}
+
+.toPrev {
+    left: 2vw;
+}
+
+.toNext {
+    right: 2vw;
+}
+
+.productCard > p {
+    padding-top: 2vh;
+    font-size: large;
+    align-self: flex-start;
+}
+
+.name:hover {
+    text-decoration: underline;
+}
+
+.price, .priceWithSale {
+    font-weight: 900;
+}
+
+.priceWithSale {
+    color: brown;
+}

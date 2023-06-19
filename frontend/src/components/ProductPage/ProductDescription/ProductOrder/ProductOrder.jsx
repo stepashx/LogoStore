@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './ProductOrder.module.css'
 
 function ProductOrder(props) {
 
     const [quantity, setQuantity] = useState(1);
+    const [price, setPrice] = useState(props.value.get("price"));
+
+    useEffect(() => {
+        setPrice(Number(props.value.get("price")) * quantity)
+    }, [quantity]);
 
     const handleQuantityChange = (event) => {
         setQuantity(Number(event.target.value));
@@ -24,7 +29,7 @@ function ProductOrder(props) {
 
     return (
         <div className={classes.container}>
-            <span className={classes.price}>Цена: {props.value.get("price")}</span>
+            <span className={classes.price}>Цена: {price}$</span>
             <div className={classes.count__container}>
                 <button className={classes.b__plus} onClick={handleDecreaseQuantity}>-</button>
                 <input

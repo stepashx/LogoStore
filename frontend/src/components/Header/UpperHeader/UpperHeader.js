@@ -1,6 +1,6 @@
 import styles from "./UpperHeader.module.css";
 import UpperHeaderItem from "./UpperHeaderItem.js";
-import logo from "../../../images/logo.svg";
+// import logo from "../../../images/logo.svg";
 import tg from "../../../images/tg.svg";
 import youtube from "../../../images/youtube.svg";
 import vk from "../../../images/vk.svg";

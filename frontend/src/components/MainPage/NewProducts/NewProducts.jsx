@@ -1,3 +1,4 @@
+import ProductCard from '../../ProductCard/ProductCard';
 import classes from './NewProducts.module.css'
 import Carousel from 'better-react-carousel'
 
@@ -13,14 +14,18 @@ function NewProducts() {
         "https://static.tvtropes.org/pmwiki/pub/images/death_23.jpg"
     ];
 
+    const product = {
+        name: "Капучино", img: "https://i.ytimg.com/vi/N6FpyM2LFsM/mqdefault.jpg",
+        price: 220, sale: true, new: false
+    }
+
     return (
         <div className={classes.container}>
             <h1>Новые поступления</h1>
-            <Carousel className={classes.carousel} cols={4} rows={1} gap={10} loop showDots={false}>
+            <Carousel className={classes.carousel} cols={3} rows={1} gap={10} loop showDots={false}>
                 {images.map(image => (
                     <Carousel.Item className={classes.carousel__item}>
-                        {/* Сюда в*****ь Карточку товара */}
-                        <img width="100%" alt="" src={image} />
+                        <ProductCard product={product} />
                     </Carousel.Item>
                 ))}
             </Carousel>

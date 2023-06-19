@@ -14,7 +14,6 @@ function ProductCard({product}) {
     const nextImg = () => setCurrImgNo((cur) => (cur + 1) % product.img.length);
     const prevImg = () => setCurrImgNo((cur) => cur > 0 ? cur - 1 : product.img.length - 1);
 
-    console.log(product)
     return (
         <div className={styles.productCard}>
             <img src={product.img[currImgNo]} alt="image"/>

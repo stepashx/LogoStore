@@ -1,4 +1,4 @@
-from enum import Enum
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -26,9 +26,8 @@ class Item(BaseModel):
     title: str
     description: str
     price: int
-    discount_percent: int
-    cart_items: list[CartItem]
-    order_items: list[OrderItem]
+    cart_items: list[CartItem] = []
+    order_items: list[OrderItem] = []
     category_id: int
 
     class Config:
@@ -38,7 +37,7 @@ class Item(BaseModel):
 class Category(BaseModel):
     id: int
     title: str
-    items: list[Item]
+    items: list[Item] = []
 
     class Config:
         orm_mode = True
@@ -47,7 +46,7 @@ class Category(BaseModel):
 class ShoppingSession(BaseModel):
     id: int
     total: int
-    cart_items: list[CartItem]
+    cart_items: list[CartItem] = []
     user_id: int
 
     class Config:
@@ -58,34 +57,61 @@ class OrderDetails(BaseModel):
     id: int
     total: int
     user_id: int
-    order_items: list[OrderItem]
+    order_items: list[OrderItem] = []
     payment_details_id: int
 
     class Config:
         orm_mode = True
 
 
-class User(BaseModel):
-    id: int
+class UserBase(BaseModel):
     email: str
-    password: str
-    username: str
-    role_id: int
+    username: str = None
     is_active: bool = True
     is_superuser: bool = False
-    is_verified: bool = False
-    shopping_sessions: list[ShoppingSession]
-    order_details: list[OrderDetails]
+
+
+class UserOut(UserBase):
+    pass
+
+
+class UserCreate(UserBase):
+    password: str
 
     class Config:
         orm_mode = True
+
+
+class UserEdit(UserBase):
+    password: Optional[str] = None
+
+    class Config:
+        orm_mode = True
+
+
+class User(UserBase):
+    id: int
+    hashed_password: str
+
+    class Config:
+        orm_mode = True
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    email: str = None
+    permissions: str = "user"
 
 
 class PaymentDetails(BaseModel):
     id: int
     amount: int
     status: str
-    order_details: list[OrderDetails]
+    order_details: list[OrderDetails] = []
 
     class Config:
         orm_mode = True

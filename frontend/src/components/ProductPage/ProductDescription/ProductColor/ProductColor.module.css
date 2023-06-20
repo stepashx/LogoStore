@@ -15,8 +15,7 @@
     border-radius: 50%;
     border: 1px solid;
     margin-right: 5px;
-    transition: filter .2s ease;
-    transition: border .2s ease;
+    transition: all .2s ease;
 }
 
 .select__color:hover {

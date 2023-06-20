@@ -1,0 +1,19 @@
+.container {
+    border-top: 1px gray solid;
+    margin-top: 20px;
+}
+
+.container h1 {    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.carousel {
+    
+}
+
+.carousel__item {
+    
+}

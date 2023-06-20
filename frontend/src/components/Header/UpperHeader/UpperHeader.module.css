@@ -1,0 +1,41 @@
+.upperHeader {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(50, 48, 47);
+    justify-content: space-between;
+    padding: 0 10vw;
+}
+
+.upperHeader__content {
+    display: flex;
+    flex-direction: row;
+}
+
+.communication {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo, .writeUs__logo {
+    width: 1vw;
+    align-self: center;
+    padding: 0 0.5vw;
+}
+
+.writeUs {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+
+.writeUs__text {
+    margin: 0;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.writeUs__text:hover {
+    text-decoration: underline;
+}

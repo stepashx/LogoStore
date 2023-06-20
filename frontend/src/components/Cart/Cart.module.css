@@ -1,0 +1,238 @@
+.container {
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: column;
+    background-color: rgb(243, 243, 243);
+    margin: auto;
+    margin-top: 40px;
+    width: calc(100% - 100px);
+}
+
+.cart__title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1%;
+}
+
+.path {
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+    width: calc(100% - 100px);
+}
+.path a{
+    color: rgb(97, 97, 97);
+}
+
+.empty__cart {
+    font-size: 3vw;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: rgb(70, 70, 70);
+}
+
+.content__wrapper {
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.cart__left__part {
+    width: 75%;
+}
+
+.cart__right__part {
+    display: flex;
+    padding: 3%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25%;
+    height: min-content;
+    background-color: white;
+    border: 1px solid rgb(176, 176, 176);
+    border-radius: 2px;
+    margin-left: 10%;
+}
+
+.order__title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Cormorant Garamond,serif;  
+}
+
+.order__count {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.order__price {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1%;
+}
+
+.order_btn {
+    align-self: flex-start;
+    border: 1px solid rgb(51, 51, 51);;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    margin-top: 5%;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.order_btn:hover {
+    background-color: white;
+    color: rgb(112, 112, 112);
+}
+
+.cart__item {
+    display: flex;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.cart__item__img {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-right: 5%;
+}
+
+.cart__item__img img {
+    width: 100%;
+}
+
+.cart__item__info {
+    display: flex;
+    position: relative;
+    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cart__item__name {
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+
+.cart__item__size {
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+
+.cart__item__size h1 {
+    font-weight: 400;
+    color: rgb(24, 24, 24);
+}
+
+.cart__price {
+    display: flex;
+}
+.cart__count {
+    display: flex;    
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.cart__count h1 {
+    margin-right: 5%;
+}
+
+.cart__item__price {
+    display: flex;
+    font-weight: 500;
+}
+
+.cart__item__price h1 {
+    font-weight: 400;
+    color: rgb(24, 24, 24);
+}
+
+.count__container {
+    border: 1px solid;
+    border-radius: 2px;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.b__plus {
+    margin-right: 0px;
+    width: 2vw;
+    height: 2vw;
+    border: none;
+    background-color: white;
+    transition: background-color .3s ease;
+    border-radius: 10%;
+}
+
+.b__plus:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+.b__minus {
+    margin-left: 0px;
+    width: 2vw;
+    height: 2vw;
+    border: none;
+    background-color: white;
+    transition: background-color .3s ease;
+    border-radius: 10%;
+}
+
+.b__minus:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.count {
+    border: none;
+    width: 3vw;
+    height: 2vw;
+    text-align: center;
+}
+
+.cart__remove__btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 30px;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    opacity: .7;
+    transition: transform .75s, opacity .1s ease-in-out;
+}
+
+.cart__remove__btn::before {
+    content: "\d7";
+}
+
+.cart__remove__btn:hover {
+    opacity: 1;
+	transform: rotate(180deg);
+}

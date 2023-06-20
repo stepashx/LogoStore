@@ -1,0 +1,27 @@
+.upperHeaderItem, .upperHeaderItemActive {
+    align-self: center;
+    padding: 2vh 0.5vw;
+}
+
+.upperHeaderItem > .NavLink, .upperHeaderItemActive > .NavLink {
+    text-decoration: none;
+}
+
+.upperHeaderItem__text {
+    margin: 0;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.upperHeaderItemActive__text {
+    margin: 0.5vh 0;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: 700;
+    border-bottom: solid 2px whitesmoke;
+}
+
+.upperHeaderItem__text:hover, .upperHeaderItemActive__text:hover {
+    text-decoration: underline;
+}

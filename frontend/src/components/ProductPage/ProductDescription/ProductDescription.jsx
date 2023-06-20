@@ -16,7 +16,7 @@ function ProductDescription() {
     product.set("size", sizes[0]);
     var colors = ["red", "black", "grey", "white"];
     product.set("color", colors[0]);
-    product.set("price", "666$");
+    product.set("price", "666");
 
     const setSize = (size) => {
         product.set("size", size)
@@ -52,10 +52,6 @@ function ProductDescription() {
             <ProductColor value={colors} onColor={setColor} />
 
             <ProductOrder value={product} />
-
-            <div className={classes.order}>
-
-            </div>
         </div>
     );
 }
